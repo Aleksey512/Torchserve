@@ -35,10 +35,10 @@ Full: [Torchserve doc](https://pytorch.org/serve/index.html)
 > http://localhost:8081/models
 
 - Check model instance
-> http://localhost:8081/models/___model-name___
+> http://localhost:8081/models/model-name
 
 - Update model config (PUT)
-> http://localhost:8081/models/___model-name___?<key1=params1>
+> http://localhost:8081/models/model-name?<key1=params1>
 
 - Send request (GET, POST)
 > http://localhost:8080/predictions/<model-name>
