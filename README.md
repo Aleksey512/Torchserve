@@ -35,7 +35,7 @@ Full: [Torchserve doc](https://pytorch.org/serve/index.html)
 > http://localhost:8081/models
 
 - Check model instance
-> http://localhost:8081/models/<model-name>
+> http://localhost:8081/models/ <model-name>
 
 - Update model config (PUT)
 > http://localhost:8081/models/<model-name>?<key1=params1>
