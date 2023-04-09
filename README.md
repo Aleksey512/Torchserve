@@ -9,7 +9,7 @@
 > docker compose up --build
 
 #### 3) Send photo (POST)
-> curl -X POST http://localhost:8080/predictions/model <path\to\photo.jpg>
+> curl http://localhost:8080/predictions/model-name -F 'file=@photo.jpg'
 
 #### 4) Output
 ```JSON
