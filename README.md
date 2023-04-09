@@ -3,13 +3,15 @@
 
 ## Installation
 
-#### 1) Run docker compose
+#### 1) Upload model to ___"model_dir"___ and rename it to ___model.pth___
+
+#### 2) Run docker compose
 > docker compose up --build
 
-#### 2) Send photo (POST)
+#### 3) Send photo (POST)
 > curl -X POST http://localhost:8080/predictions/model <path\to\photo.jpg>
 
-#### 3) Output
+#### 4) Output
 ```JSON
 {
   "melanoma": 0.91493821144104,
