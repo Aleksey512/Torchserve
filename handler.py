@@ -23,7 +23,6 @@ class ModelHandler(BaseHandler):
 
     def initialize(self, context):
         """Initialize function loads the model and the tokenizer
-
         Args:
             context (context): It is a JSON Object containing information
             pertaining to the model artifacts parameters.

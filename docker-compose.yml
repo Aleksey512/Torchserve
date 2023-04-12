@@ -4,7 +4,7 @@ services:
   torchserve:
     build:
       dockerfile: ./Dockerfile
-    command: torchserve --start --model-store model-store --ts-config /home/model-server/config.properties
+    command: torchserve --start --model-store model-store --models all --ts-config /home/model-server/config.properties --ncs
     expose:
       - 8080
       - 8081
