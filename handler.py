@@ -2,7 +2,6 @@ import io
 
 import torch
 import logging
-import transformers
 import os
 
 from PIL import Image
@@ -12,7 +11,6 @@ from ts.torch_handler.base_handler import BaseHandler
 from model import enetv2
 
 logger = logging.getLogger(__name__)
-logger.info("Transformers version %s", transformers.__version__)
 
 kernel_type = 'model'
 enet_type = 'efficientnet-b7'
@@ -30,7 +28,6 @@ class ModelHandler(BaseHandler):
 
         properties = context.system_properties
         self.manifest = context.manifest
-        model_dir = properties.get("model_dir")
 
         logger.info(f'Properties: {properties}')
         logger.info(f'Manifest: {self.manifest}')
@@ -38,7 +35,6 @@ class ModelHandler(BaseHandler):
         self.device = torch.device('cpu')
         # load the model
         model_file = self.manifest["model"].get("modelFile", "")
-        model_path = os.path.join(model_dir, model_file)
 
         if model_file:
             self.model = enetv2(enet_type, n_meta_features=0, out_dim=out_dim)
